@@ -12,13 +12,15 @@
 
 ## Notice of Non-Affiliation and Disclaimer
 
-Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Franz, or any of its subsidiaries or its affiliates. The official Franz website can be found at https://meetfranz.com/.
+Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with Franz™, or any of its subsidiaries or its affiliates.
 
-The name Franz® as well as related names, marks, emblems and images are registered trademarks of their respective owners.
+The official Franz™ website can be found at https://meetfranz.com/.
+
+The name Franz™ as well as related names, marks, emblems and images are registered trademarks of their respective owners.
 
 ## About
 
-Franz portable app made with 🚀 [Portapps](https://portapps.io).<br />
+Franz™ portable app made with 🚀 [Portapps](https://portapps.io).<br />
 Documentation and downloads can be found on https://portapps.io/app/franz-portable/
 
 ## How can I help ?
