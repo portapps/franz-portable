@@ -54,6 +54,18 @@
       <replacefilter token="${electron.appasar.search}" value="${electron.appasar.replace}"/>
       <replacefilter token="${electron.appasar.search2}" value="${electron.appasar.replace2}"/>
     </replace>
+    <assertfile file="${extract.path}\resources\app\${electron.appasar2.file}"/>
+    <replace file="${extract.path}\resources\app\${electron.appasar2.file}" failOnNoReplacements="true">
+      <replacefilter token="${electron.appasar2.search}" value="${electron.appasar2.replace}"/>
+    </replace>
+    <assertfile file="${extract.path}\resources\app\${electron.appasar3.file}"/>
+    <replace file="${extract.path}\resources\app\${electron.appasar3.file}" failOnNoReplacements="true">
+      <replacefilter token="${electron.appasar3.search}" value="${electron.appasar3.replace}"/>
+    </replace>
+    <assertfile file="${extract.path}\resources\app\${electron.appasar4.file}"/>
+    <replace file="${extract.path}\resources\app\${electron.appasar4.file}" failOnNoReplacements="true">
+      <replacefilter token="${electron.appasar4.search}" value="${electron.appasar4.replace}"/>
+    </replace>
 
     <echo message="Removing app.asar..."/>
     <delete file="${extract.path}\resources\app.asar"/>
