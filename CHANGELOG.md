@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.2.0-4 (2019/07/24)
+
+* Add option to disable delay (Issue #2)
+
 ## 5.2.0-3 (2019/07/21)
 
 * Franz 5.2.0

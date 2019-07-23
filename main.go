@@ -16,15 +16,25 @@ import (
 	"github.com/portapps/portapps/pkg/utl"
 )
 
+type config struct {
+	DisableDelay bool `yaml:"disable_delay" mapstructure:"disable_delay"`
+}
+
 var (
 	app *App
+	cfg *config
 )
 
 func init() {
 	var err error
 
+	// Default config
+	cfg = &config{
+		DisableDelay: false,
+	}
+
 	// Init app
-	if app, err = New("franz-portable", "Franz"); err != nil {
+	if app, err = NewWithCfg("franz-portable", "Franz", cfg); err != nil {
 		Log.Fatal().Err(err).Msg("Cannot initialize application. See log file for more info.")
 	}
 }
@@ -42,6 +52,13 @@ func main() {
 	err = ioutil.WriteFile(shortcutPath, defaultShortcut, 0644)
 	if err != nil {
 		Log.Error().Err(err).Msg("Cannot write default shortcut")
+	}
+
+	// Check delay
+	if cfg.DisableDelay {
+		utl.OverrideEnv("FRANZ_DELAY", "false")
+	} else {
+		utl.OverrideEnv("FRANZ_DELAY", "true")
 	}
 
 	// Update default shortcut
