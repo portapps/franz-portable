@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.3.1-5 (2019/09/09)
+
+* Franz 5.3.1
+* Portapps 1.26.1
+
 ## 5.2.0-4 (2019/07/24)
 
 * Add option to disable delay (Issue #2)
