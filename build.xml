@@ -35,11 +35,7 @@
       <fileset dir="${extract.path2}" defaultexcludes="no"/>
     </move>
 
-    <setelectronuserdata path="${extract.path}"
-       file="${electron.userdata.file}"
-       search="${electron.userdata.search}"
-       replace="${electron.userdata.replace}"
-    />
+    <antcall target="load.lib.asar"/>
 
     <echo message="Extracting app.asar..."/>
     <exec executable="asar.cmd" failonerror="true" dir="${extract.path}\resources">

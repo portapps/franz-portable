@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.4.0-7 (2019/10/23)
+
+* Franz 5.4.0
+* Franz is now based on Electron 6
+* Portapps 1.28.0
+
 ## 5.3.3-6 (2019/09/17)
 
 * Franz 5.3.3
