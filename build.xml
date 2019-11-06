@@ -16,7 +16,7 @@
   <!-- Targets -->
   <target name="release" depends="release.app" description="Release"/>
 
-  <target name="prepare">
+  <target name="prepare" depends="load.lib.asar">
     <echo message="Preparing release..."/>
 
     <echo message="Extracting embedded ${atf.arch} archive"/>
@@ -34,8 +34,6 @@
     <move todir="${extract.path}">
       <fileset dir="${extract.path2}" defaultexcludes="no"/>
     </move>
-
-    <antcall target="load.lib.asar"/>
 
     <echo message="Extracting app.asar..."/>
     <exec executable="asar.cmd" failonerror="true" dir="${extract.path}\resources">
