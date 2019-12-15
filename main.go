@@ -16,6 +16,7 @@ import (
 )
 
 type config struct {
+	Cleanup      bool `yaml:"cleanup" mapstructure:"cleanup"`
 	DisableDelay bool `yaml:"disable_delay" mapstructure:"disable_delay"`
 }
 
@@ -29,6 +30,7 @@ func init() {
 
 	// Default config
 	cfg = &config{
+		Cleanup:      false,
 		DisableDelay: false,
 	}
 
@@ -43,6 +45,15 @@ func main() {
 	app.Process = utl.PathJoin(app.AppPath, "Franz.exe")
 	app.Args = []string{
 		"--user-data-dir=" + app.DataPath,
+	}
+
+	// Cleanup on exit
+	if cfg.Cleanup {
+		defer func() {
+			utl.Cleanup([]string{
+				path.Join(os.Getenv("APPDATA"), "Franz"),
+			})
+		}()
 	}
 
 	// Copy default shortcut
