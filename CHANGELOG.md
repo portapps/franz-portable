@@ -1,5 +1,10 @@
 # Changelog
 
+## 5.4.1-9 (2020/02/01)
+
+* Add `cleanup` config
+* Portapps 1.31.0
+
 ## 5.4.1-8 (2019/11/03)
 
 * Franz 5.4.1
