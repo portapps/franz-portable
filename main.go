@@ -10,10 +10,10 @@ import (
 	"path"
 
 	"github.com/portapps/franz-portable/assets"
-	"github.com/portapps/portapps/v2"
-	"github.com/portapps/portapps/v2/pkg/log"
-	"github.com/portapps/portapps/v2/pkg/shortcut"
-	"github.com/portapps/portapps/v2/pkg/utl"
+	"github.com/portapps/portapps/v3"
+	"github.com/portapps/portapps/v3/pkg/log"
+	"github.com/portapps/portapps/v3/pkg/shortcut"
+	"github.com/portapps/portapps/v3/pkg/utl"
 )
 
 type config struct {
@@ -70,9 +70,9 @@ func main() {
 
 	// Check delay
 	if cfg.DisableDelay {
-		utl.OverrideEnv("FRANZ_DELAY", "false")
+		os.Setenv("FRANZ_DELAY", "false")
 	} else {
-		utl.OverrideEnv("FRANZ_DELAY", "true")
+		os.Setenv("FRANZ_DELAY", "true")
 	}
 
 	// Update default shortcut
