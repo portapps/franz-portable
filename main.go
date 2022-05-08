@@ -47,6 +47,9 @@ func main() {
 		"--user-data-dir=" + app.DataPath,
 	}
 
+	// Data dir
+	os.Setenv("FRANZ_APPDATA_DIR", app.DataPath)
+
 	// Cleanup on exit
 	if cfg.Cleanup {
 		defer func() {
